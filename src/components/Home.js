@@ -35,7 +35,7 @@ const Home = () => {
           <img src={`${process.env.PUBLIC_URL}/avatar.jpg`} alt="Your Image" className="sphere" />
         </div>
         <div className="social-icons">
-          <a href="https://www.instagram.com/j3van_._/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/j3van__.__/" target="_blank" rel="noopener noreferrer">
             <FaInstagram />
           </a>
           <a href="https://www.linkedin.com/in/jeevan-c-k-546349249" target="_blank" rel="noopener noreferrer">
