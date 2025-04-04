@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+/* Home Section */
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure it fully occupies the viewport height */
+  background: #2b2b2b;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden; /* Prevents scrolling */
+}
+
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.home-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: rgb(30, 159, 171);
+}
+
+.home-content p {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #dcdcdc;
+}
+
+.typedText {
+  font-size: 1em;
+  color: #FFA726;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px; /* Adjusted margin */
+}
+
+.social-icons a {
+  color: rgb(30, 159, 171);
+  font-size: 2em;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FFD700;
+}
+
+.home-image {
+  display: flex;
+  justify-content: center;
+}
+
+.home-image img {
+  max-width: 100%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 3em;
+  }
+
+  .home-content p {
+    font-size: 1em;
+  }
+
+  .home-image img {
+    width: 150px;
+    height: 150px;
+  }
+}

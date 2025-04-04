@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  background: #383838;
+  padding: 0 9vw;
+  transition: background 0.3s, height 0.3s;
+  z-index: 100;
+}
+
+.nav-logo {
+  position: relative;
+}
+
+/* Animated "Jeevan" text */
+.nav-logo h1 {
+  font-family: 'Teko', sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  text-align: center;
+  color: rgb(30, 159, 171);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for "CK" to be a different color */
+.nav-logo h1 .ck {
+  color: #FFA726; /* Choose any color you like, this is a bright orange */
+}
+
+/* .nav-logo h1:before {
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(#f70000, #f89200, #f8f501, #038f00, #0168f8, #a200f7);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 100% 90%;
+  line-height: 0.9;
+  clip-path: ellipse(150px 150px at 50% 50%);
+  animation: swing 5s infinite alternate;
+} */
+
+@keyframes swing {
+  0% { clip-path: ellipse(150px 150px at 0% 0%); }
+  50% { clip-path: ellipse(150px 150px at 50% 50%); }
+  100% { clip-path: ellipse(150px 150px at 100% 100%); }
+}
+
+
+.nav-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+}
+
+.nav-menu, .nav_menu_list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu .nav_list {
+  list-style: none;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  font-weight: 500;
+  padding: 0 15px;
+  margin: 0 20px;
+  transition: color 0.3s;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-link:hover {
+  color: rgb(30, 159, 171);
+}
+
+.nav-button .btn {
+  font-weight: 500;
+  padding: 8px 15px;
+  background: rgb(30, 159, 171);
+  color: #2b2b2b;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.nav-button .btn:hover {
+  background: #1a7a85;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.nav-button i {
+  margin-left: 5px;
+}
+
+.nav-menu-btn {
+  display: none;
+}
+
+.nav-menu-btn i {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.active-link {
+  position: relative;
+  color: rgb(30, 159, 171);
+  transition: color 0.3s;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background: rgb(30, 159, 171);
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+    padding: 0 5vw;
+    justify-content: center; /* Center the name */
+  }
+
+  .nav-menu, .nav-button {
+    display: none; /* Hide all menu options and buttons */
+  }
+
+  .nav-name {
+    font-size: 60px;
+    letter-spacing: 1.5px;
+  }
+
+  .nav-link {
+    padding: 0 10px;
+    margin: 0 10px;
+  }
+
+  .nav-button .btn {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+}

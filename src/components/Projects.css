@@ -1,0 +1,97 @@
+/* Projects Section */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background: #2b2b2b; /* Dark background color */
+  color: #f0f0f0; /* Light font color for contrast */
+  animation: slideInUp 1s ease-in-out; /* Apply slide-in-up animation */
+}
+
+.projects-content {
+  max-width: 1200px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+.projects h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: rgb(30, 159, 171); /* Updated color for headings */
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.project-item {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s;
+  animation: slideInUp 1s ease-in-out; /* Apply slide-in-up animation */
+}
+
+.project-item:hover {
+  transform: scale(1.05) rotate(5deg); /* Slight rotation on hover */
+}
+
+.project-item i {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #FFA726; /* Orange color for icons */
+}
+
+.project-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #FFA726; /* White color for headings */
+}
+
+.project-item p {
+  font-size: 1em;
+  color: #dcdcdc; /* Light gray color for paragraphs */
+}
+
+/* Initial State for Scroll Animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(100px); /* Adjust as needed */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Active State for Scroll Animations */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects h2 {
+    font-size: 2em;
+  }
+
+  .project-item {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .project-item i {
+    font-size: 2em;
+  }
+
+  .project-item h3 {
+    font-size: 1.2em;
+  }
+
+  .project-item p {
+    font-size: 0.9em;
+  }
+}
